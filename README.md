@@ -107,7 +107,7 @@ mvn test
 
 **Resultado:**
 
-<!-- Inserta aquí una captura de pantalla del resultado de mvn test -->
+![alt text](image.png)
 
 ---
 
@@ -120,8 +120,11 @@ Crear una instancia EC2 `t2.micro` con `Amazon Linux 2023` y habilitar en el Sec
 
 ### Paso 2 – Conectarse
 ```bash
-ssh -i "labsuser.pem" ec2-user@<PUBLIC-IP>
+ssh -i lab-3.pem ec2-user@ec2-52-87-245-141.compute-1.amazonaws.com
+
 ```
+![alt text](image-1.png)
+
 
 ### Paso 3 – Instalar dependencias
 ```bash
@@ -129,6 +132,11 @@ sudo yum update -y
 sudo yum install java-17-amazon-corretto git -y
 sudo yum install -y apache-maven
 ```
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+
 
 ### Paso 4 – Clonar y compilar
 ```bash
@@ -137,16 +145,23 @@ cd -Taller-de-Arquitecturas-de-Servidores-de-Aplicaciones
 mvn clean install
 ```
 
+![alt text](image-6.png)
+
 ### Paso 5 – Ejecutar el servidor
 ```bash
 nohup java -cp target/classes co.edu.escuelaing.reflexionlab.MicroSpringBoot > log.txt 2>&1 &
 ```
+![alt text](image-7.png)
+
 
 ### Paso 6 – Verificar
+
 ```
-http://<PUBLIC-IP>:8080/
-http://<PUBLIC-IP>:8080/hello
-http://<PUBLIC-IP>:8080/greeting?name=AWS
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/hello
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/greeting
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/greeting?name=AWS
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/index.html
 ```
 
 **Evidencia del despliegue:**
