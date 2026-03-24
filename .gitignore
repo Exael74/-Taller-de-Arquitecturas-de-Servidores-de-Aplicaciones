@@ -39,5 +39,4 @@ log/
 *.iml
 *.ipr
 
-# Exclude AWS Deployment Guide
-AWS_DEPLOYMENT_STEPS.md
+
