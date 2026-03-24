@@ -166,4 +166,17 @@ http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/index.html
 
 **Evidencia del despliegue:**
 
-<!-- Inserta aquí una captura de pantalla del servidor corriendo en EC2 -->
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/
+![alt text](image-8.png)
+
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/hello
+![alt text](image-9.png)
+
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/greeting
+![alt text](image-10.png)
+
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/greeting?name=AWS
+![alt text](image-11.png)
+
+http://ec2-52-87-245-141.compute-1.amazonaws.com:8080/index.html
+![alt text](image-12.png)
